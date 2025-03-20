@@ -13,3 +13,9 @@ praktikum 2 soal 4
 Kode pada langkah 1 dan 2 dalam praktikum 2 bertujuan untuk menjalankan tiga fungsi asynchronous (returnOneAsync, returnTwoAsync, returnThreeAsync) yang masing-masing memiliki delay 3 detik sebelum mengembalikan nilai. Method count() kemudian menjumlahkan hasil dari ketiga fungsi tersebut, sehingga totalnya adalah 6 setelah semua proses selesai dalam waktu 9 detik. Pola async/await digunakan untuk memastikan bahwa setiap fungsi menunggu hingga selesai sebelum melanjutkan ke proses berikutnya, membuat kode lebih bersih dan mudah dibaca dibandingkan menggunakan callback atau then().
 
 ![soal4](lib/assets/prak2.gif)
+
+praktikum 3 soal 5
+
+Kode pada langkah 2 dalam praktikum 3 menggunakan Completer untuk mengontrol kapan sebuah Future akan selesai. Variabel completer dideklarasikan sebagai Completer<int>, lalu metode getNumber() menginisialisasi completer dan memanggil calculate(), yang setelah delay 5 detik akan menyelesaikan Future dengan nilai 42 menggunakan completer.complete(42). Pendekatan ini memungkinkan kita untuk menyelesaikan Future secara manual kapan saja, memberikan fleksibilitas lebih dalam mengelola operasi asynchronous dibandingkan hanya menggunakan Future.delayed.
+
+![soal5](lib/assets/prak3-5.gif)
