@@ -1,3 +1,3 @@
-praktikum 1 hasil soal 5 
+praktikum 1 hasil soal 2
 
-![prak1](lib/assets/json.png)
+![soal2](lib/assets/json.png)
