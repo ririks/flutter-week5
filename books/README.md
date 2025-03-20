@@ -25,3 +25,9 @@ praktikum 3 soal 6
 Perbedaan kode langkah 2 dengan langkah 5-6 dalam praktikum 3 terletak pada cara menangani hasil Future. Pada langkah 2, Completer digunakan untuk menyelesaikan Future secara manual dengan completer.complete(42). Sementara pada langkah 5-6, getNumber() dipanggil menggunakan then(), yang langsung menetapkan hasilnya ke setState(), memperbarui UI saat Future selesai. Selain itu, catchError() ditambahkan untuk menangani kemungkinan error, sehingga jika terjadi kesalahan, UI akan menampilkan pesan error.
 
 ![soal5](lib/assets/prak3-6.gif)
+
+praktikum 4 soal 7 & 8
+
+![soal7](lib/assets/prak4.gif)
+
+Perbedaan kode langkah 1 dan 4 dalam praktikum 4 terletak pada cara menjalankan beberapa Future secara paralel. Pada langkah 1, FutureGroup digunakan untuk mengelola beberapa operasi asynchronous secara bersamaan, di mana kita harus menambahkan Future satu per satu ke dalam grup sebelum menunggu hasilnya. Sedangkan pada langkah 4, Future.wait([]) langsung menjalankan semua Future dalam sebuah list dan menunggu hingga semuanya selesai sekaligus. Future.wait([]) lebih sederhana dan langsung mengembalikan hasil dalam bentuk list tanpa perlu mengelola grup secara manual, membuat kode lebih ringkas dan mudah dipahami.
