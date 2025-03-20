@@ -73,6 +73,24 @@ Future calculate() async {
     return 3;
   }
 
+    void returnFG() {
+    FutureGroup<int> futureGroup = FutureGroup<int>();
+    futureGroup.add(returnOneAsync());
+    futureGroup.add(returnTwoAsync());
+    futureGroup.add(returnThreeAsync());
+    futureGroup.close();
+
+    futureGroup.future.then((List<int> value) {
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+  });
+  }
+
    Future count() async {
     int total = 0;
     total = await returnOneAsync();
@@ -97,13 +115,8 @@ Future calculate() async {
             ElevatedButton(
               child: const Text('GO!'),
               onPressed: () {
-                getNumber().then((value) {
-                  setState(() {
-                    result = value.toString();
-              });
-                }).catchError((e) {
-                 result = 'An error occurred';
-                });
+                returnFG();
+              
               }
             ),
             const Spacer(),
