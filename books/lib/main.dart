@@ -74,13 +74,13 @@ Future calculate() async {
   }
 
     void returnFG() {
-    FutureGroup<int> futureGroup = FutureGroup<int>();
-    futureGroup.add(returnOneAsync());
-    futureGroup.add(returnTwoAsync());
-    futureGroup.add(returnThreeAsync());
-    futureGroup.close();
+    final futures = Future.wait<int>([
+        returnOneAsync(),
+        returnTwoAsync(),
+        returnThreeAsync(),
+        ]);
 
-    futureGroup.future.then((List<int> value) {
+    futures.then((List<int> value) {
       int total = 0;
       for (var element in value) {
         total += element;
