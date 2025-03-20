@@ -102,6 +102,23 @@ Future calculate() async {
     });
   }
 
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+ }
+
+ Future handleError() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    } finally {
+      print('Complete');
+    }
+  }
+
  @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,10 +131,9 @@ Future calculate() async {
             const Spacer(),
             ElevatedButton(
               child: const Text('GO!'),
-              onPressed: () {
-                returnFG();
-              
-              }
+            onPressed: () {
+                handleError();
+              },
             ),
             const Spacer(),
             Text(result),
