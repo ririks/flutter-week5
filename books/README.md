@@ -50,4 +50,9 @@ Ya ada perbedaan UI antara praktikum ini dengan sebelumnya karena di praktikum i
 
 ![soal13](lib/assets/prak7.gif)
 
+praktikum 7 soal 14
+
+Ya, ada perbedaan UI setelah menambahkan handling error pada langkah ini. Sebelumnya, jika terjadi error mungkin aplikasi hanya akan menampilkan layar kosong atau berhenti tanpa memberi tahu pengguna. Setelah menambahkan pengecekan snapshot.hasError, UI sekarang bisa menampilkan pesan kesalahan seperti Something terrible happened! jika ada masalah. Ini membuat aplikasi lebih informatif dan mudah dipahami oleh pengguna saat terjadi error.
+
+![soal14](lib/assets/prak7-14.gif)
 
