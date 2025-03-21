@@ -56,3 +56,8 @@ Ya, ada perbedaan UI setelah menambahkan handling error pada langkah ini. Sebelu
 
 ![soal14](lib/assets/prak7-14.gif)
 
+praktikum 8 soal 16
+
+Ketika mengklik setiap tombol, warna latar belakang aplikasi berubah sesuai dengan warna yang telah dipilih pada halaman kedua. Hal ini terjadi karena fungsi _navigateAndGetColor() menggunakan await Navigator.push(), yang menunggu hingga halaman kedua dikembalikan sebelum memperbarui warna latar belakang. Dengan cara ini, nilai warna yang dipilih oleh pengguna dikembalikan ke halaman pertama dan diterapkan menggunakan setState(), sehingga UI berubah secara dinamis.
+
+![soal16](lib/assets/prak8.gif)
