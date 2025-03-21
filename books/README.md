@@ -37,3 +37,10 @@ praktikum 5 soal 9 & 10
 ![soal9](lib/assets/prak5.gif)
 
 Ketika kode ini dijalankan, aplikasi Flutter akan menampilkan layar dengan tombol GO, teks kosong di awal, dan sebuah CircularProgressIndicator. Saat tombol ditekan, fungsi handleError() akan dipanggil, yang pada gilirannya menjalankan returnError(). Fungsi ini menunggu 2 detik sebelum melempar Exception dengan pesan Something terrible happened!. Kesalahan ini ditangkap dalam blok try-catch, dan pesan error ditampilkan di layar dengan setState(), menggantikan teks kosong sebelumnya. Di konsol debug, teks Complete juga akan dicetak dari blok finally. CircularProgressIndicator tetap ada di layar karena tidak dikontrol oleh perubahan state dalam kode ini
+
+praktikum 6 soal 12
+
+koordinat GPS muncul di browser saat dijalankan menggunakan run debug karena browser dapat mengakses layanan lokasi dengan izin yang sesuai. Namun, ketika dijalankan dengan flutter run di terminal, koordinat tidak muncul karena emulator atau perangkat mungkin tidak memberikan izin lokasi secara default, atau layanan lokasi tidak diaktifkan dengan benar. Selain itu, saat debug, aplikasi bisa menggunakan layanan lokasi simulasi atau cache yang membuat koordinat tetap muncul. 
+
+![soal9](lib/assets/prak5.gif)
+
