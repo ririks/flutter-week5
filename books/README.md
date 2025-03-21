@@ -61,3 +61,9 @@ praktikum 8 soal 16
 Ketika mengklik setiap tombol, warna latar belakang aplikasi berubah sesuai dengan warna yang telah dipilih pada halaman kedua. Hal ini terjadi karena fungsi _navigateAndGetColor() menggunakan await Navigator.push(), yang menunggu hingga halaman kedua dikembalikan sebelum memperbarui warna latar belakang. Dengan cara ini, nilai warna yang dipilih oleh pengguna dikembalikan ke halaman pertama dan diterapkan menggunakan setState(), sehingga UI berubah secara dinamis.
 
 ![soal16](lib/assets/prak8.gif)
+
+praktikum 9 soal 17
+
+Saat mengklik setiap tombol dalam praktikum 9, aplikasi akan menampilkan widget AlertDialog yang bisa memilih warna baru untuk background. Setelah memilih, warna background akan diperbarui sesuai dengan pilihan warna yang sudah dipilih. Hal ini terjadi karena kode menggunakan async/await untuk menunggu hasil dari dialog sebelum menerapkan perubahan warna pada UI.
+
+![soal17](lib/assets/prak9.gif)
