@@ -42,5 +42,12 @@ praktikum 6 soal 12
 
 koordinat GPS muncul di browser saat dijalankan menggunakan run debug karena browser dapat mengakses layanan lokasi dengan izin yang sesuai. Namun, ketika dijalankan dengan flutter run di terminal, koordinat tidak muncul karena emulator atau perangkat mungkin tidak memberikan izin lokasi secara default, atau layanan lokasi tidak diaktifkan dengan benar. Selain itu, saat debug, aplikasi bisa menggunakan layanan lokasi simulasi atau cache yang membuat koordinat tetap muncul. 
 
-![soal9](lib/assets/prak5.gif)
+![soal12](lib/assets/prak6.gif)
+
+praktikum 7 soal 13 
+
+Ya ada perbedaan UI antara praktikum ini dengan sebelumnya karena di praktikum ini menggunakan FutureBuilder. Dengan FutureBuilder, UI akan diperbarui secara otomatis berdasarkan status dari Future yang sedang berjalan. Hal ini berbeda dengan praktikum sebelumnya, di mana harus secara manual memanggil setState() untuk memperbarui UI setelah mendapatkan data. FutureBuilder membuat kode lebih rapi, efisien, dan reaktif terhadap perubahan data yang diperoleh dari proses asynchronous.
+
+![soal13](lib/assets/prak7.gif)
+
 
